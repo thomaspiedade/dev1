@@ -2,7 +2,7 @@
 class Auth{
 	
 	public static function login( User $User, UserDAO $UserDAO ){
-		$result = $UserDAO->findAll(array('email = "' . $User->getEmail() . '"', 'password = "' . md5($User->getPassword()) . '"'));
+		$result = $UserDAO->find(array('email = "' . $User->getEmail() . '"', 'password = "' . md5($User->getPassword()) . '"'));
 		return count($result);
 	}
 
