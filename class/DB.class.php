@@ -4,12 +4,11 @@ Class DB{
 	public static $name;
 	public static $user;
 	public static $pass;	
-	public static function init(){
-			self::$host = 'host';
-			self::$name = 'name';
-			self::$user = 'user';
-			self::$pass = 'pass';	
-		}		
+	public static function init(){		
+		self::$host = 'localhost';
+		self::$name = 'laravel';
+		self::$user = 'root';
+		self::$pass = '';				
 	}
 	public static function host(){
 		return self::$host;

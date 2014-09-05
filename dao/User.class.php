@@ -1,5 +1,6 @@
 <?php
-class UserDAO{
+namespace App\DAO;
+class User{
 	public $lastInsertId;// last inserted id in table
 	public $total; //total of rows for an consult
 	private $table = 'users'; // table in database
@@ -8,7 +9,7 @@ class UserDAO{
 		construct method
 		@var object $storage -> instance of storage;
 	*/	
-	public function __construct(Storage $storage){
+	public function __construct( $storage ){
 		$this->storage 	= $storage;
 	}
 		
@@ -16,7 +17,7 @@ class UserDAO{
 		getById method
 		@var integer $id ->  id of user to get data
 	*/
-	public function getById($id){
+	public function findById($id){
 		return $this->storage->selectOne($this->table, array('id = ' . $id));
 	}	
 	

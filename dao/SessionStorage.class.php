@@ -1,4 +1,5 @@
 <?php
+namespace App\DAO;
 Class SessionStorage{
 	
 	private $id;

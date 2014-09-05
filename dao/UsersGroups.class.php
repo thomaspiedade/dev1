@@ -1,5 +1,6 @@
 <?php
-Class UsersGroupsDAO{
+namespace App\DAO;
+Class UsersGroups{
 	
 	public  $insertId;// last inserted id in table
 	public  $total; //total of rows for an consult
